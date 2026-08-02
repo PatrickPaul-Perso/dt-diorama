@@ -1,3 +1,5 @@
+import SceneGallery from "./SceneGallery";
+
 function ArrowIcon() {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -39,7 +41,7 @@ const scenes = [
     title: "Capital station",
     text: "An Ottawa-inspired passenger station and passenger rail setting.",
     image: "/images/scene-capital-station.jpg",
-    alt: "Ottawa-inspired stone passenger station on the diorama",
+    alt: "Ottawa-inspired Capital Station behind a landscaped rail curve and stone bridge",
   },
   {
     number: "02",
@@ -81,7 +83,7 @@ const scenes = [
 const included = [
   "Approximately 30 numbered modular landscape sections",
   "A matching transport crate for every section",
-  "A custom two-section support table with ten wheeled legs and three additional centre-span supports",
+  "A custom two-section support table with ten wheeled legs, three additional centre-span supports and adjustable module-levelling points",
   "Digitrax DCC railway control system",
   "VIA Rail passenger and CN freight locomotives with lights and sound",
   "Passenger and freight rolling stock, including 3D-printed containers",
@@ -216,25 +218,7 @@ export default function Home() {
             <img src="/images/diorama-mountain.jpg" alt="Mountain, tunnels, bridge and autumn forest details on the diorama" />
             <figcaption><span>Actual diorama</span> Mountain and tunnel zone</figcaption>
           </figure>
-          <div className="scene-list">
-            {scenes.map((scene) => (
-              <article key={scene.number}>
-                <span>{scene.number}</span>
-                <img src={scene.image} alt={scene.alt} loading="lazy" />
-                <div><h3>{scene.title}</h3><p>{scene.text}</p></div>
-              </article>
-            ))}
-            <aside className="route-note">
-              <p className="section-kicker">Railway operation</p>
-              <h3>A two-level route built for varied movement.</h3>
-              <p>
-                The network follows a figure-eight-like arrangement with a large
-                loop, passing tracks near the passenger station and grain elevator,
-                a descent beneath the hotel, and a switching yard beside the port.
-                Its last verified operation supported both trains across the layout.
-              </p>
-            </aside>
-          </div>
+          <SceneGallery scenes={scenes} />
         </div>
       </section>
 
@@ -247,10 +231,16 @@ export default function Home() {
             />
             <figcaption className="image-label"><span>Support structure</span> Actual two-section table without the diorama modules</figcaption>
           </figure>
-          <figure className="transfer-inset">
-            <img src="/images/transport-crates.jpg" alt="Custom transport crates containing modular diorama sections" />
-            <figcaption><span>Protected</span> Matching transport crates</figcaption>
-          </figure>
+          <div className="transfer-details">
+            <figure>
+              <img src="/images/table-leveling-detail.jpg" alt="Adjustable levelling screws beneath a numbered diorama module attached to the aluminum support frame" />
+              <figcaption><span>Adjustable</span> Module 29 and its levelling points</figcaption>
+            </figure>
+            <figure>
+              <img src="/images/transport-crates.jpg" alt="Custom transport crates containing modular diorama sections" />
+              <figcaption><span>Protected</span> Matching transport crates</figcaption>
+            </figure>
+          </div>
         </div>
         <div className="transfer-copy">
           <p className="section-kicker">Built to relocate</p>
@@ -259,13 +249,17 @@ export default function Home() {
             Each landscape section is numbered and paired with a custom wooden
             transport crate. A massive, purpose-built table provides the flat,
             rigid foundation required to align the complete railway. The table
-            separates into two main sections for relocation.
+            separates into two main sections for relocation. Adjustable supports
+            beneath the numbered modules make it possible to establish a continuous,
+            level surface, which is pivotal to precise track and scenery alignment
+            at every module boundary.
           </p>
           <div className="transfer-specs">
             <div><strong>Modular</strong><span>Sections pass through standard doors</span></div>
             <div><strong>Protected</strong><span>Dedicated crates simplify handling</span></div>
             <div><strong>Mobile</strong><span>Each table section has four corner legs on casters and a fifth wheeled leg at its centre</span></div>
             <div><strong>Reinforced</strong><span>Three additional legs support the central span where the two sections meet</span></div>
+            <div><strong>Levelled</strong><span>Individual adjustment points establish a common plane across all numbered modules</span></div>
           </div>
         </div>
       </section>
