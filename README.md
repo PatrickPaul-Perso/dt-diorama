@@ -9,6 +9,7 @@ Live site: https://research-train-diorama.patpaul.chatgpt.site
 ## Current content
 
 - Original research vision covering AI, analytics, NLP, computer vision, Industrial IoT, automation, and train logistics
+- Academic development history involving multiple undergraduate students, hands-on term work, and conference-style presentation of results
 - Canadian-themed scenic areas and two-level railway operation
 - Transfer package, including approximately 30 modular sections and their transport crates
 - Corrected table structure: two table sections, ten wheeled legs, and three additional centre-span supports

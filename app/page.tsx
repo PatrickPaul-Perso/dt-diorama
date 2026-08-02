@@ -204,6 +204,35 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="academic section" id="academic">
+        <div className="academic-copy">
+          <p className="section-kicker">Academic collaboration</p>
+          <h2>Developed through student learning and applied research.</h2>
+          <p className="large-copy">
+            Multiple undergraduate students contributed to different aspects of
+            the platform over successive academic terms, turning the diorama into
+            a shared environment for hands-on development and demonstration.
+          </p>
+          <p>
+            Students could develop, integrate and test ideas spanning Industrial
+            IoT, data analytics, artificial intelligence, computer vision,
+            automation and train logistics. Their work also included communicating
+            term results in a conference format, connecting practical engineering
+            with presentation, discussion and knowledge sharing.
+          </p>
+        </div>
+        <figure className="academic-visual">
+          <img
+            src="/images/student-conference-presentation.jpg"
+            alt="An undergraduate student presenting term results about an Industrial IoT platform in a conference setting"
+          />
+          <figcaption>
+            <span>Student-led development</span>
+            Undergraduate term results shared in a conference format
+          </figcaption>
+        </figure>
+      </section>
+
       <section className="scenes section" id="scenes">
         <div className="section-heading scenes-heading">
           <p className="section-kicker">A Canadian landscape in miniature</p>
@@ -234,10 +263,10 @@ export default function Home() {
           <div className="transfer-details">
             <figure>
               <img src="/images/table-leveling-detail.jpg" alt="Adjustable levelling screws beneath a numbered diorama module attached to the aluminum support frame" />
-              <figcaption><span>Adjustable</span> Module 29 and its levelling points</figcaption>
+              <figcaption><span>Adjustable</span> Module levelling points</figcaption>
             </figure>
             <figure>
-              <img src="/images/module-identification-evidence.jpg" alt="Cropped underside view showing the embossed number 29 on a diorama module" />
+              <img src="/images/module-identification-evidence.jpg" alt="Cropped underside view showing an embossed identifier on a diorama module" />
               <figcaption><span>Identified</span> Embossed module numbering</figcaption>
             </figure>
             <figure>

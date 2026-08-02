@@ -8,6 +8,13 @@ This file is the working content reference for the website. Approximate values a
 - Intended to make data analytics, natural language processing, sentiment analysis, Industrial IoT, train logistics, manufacturing, Industry 4.0, automation, artificial intelligence, computer vision, and predictive analytics tangible to visitors.
 - Potential recipients include museums, academia, model railway organizations, and enthusiasts able to receive and operate a large installation.
 
+## Academic development
+
+- The platform had an academic development and demonstration role in addition to its public-facing research purpose.
+- Multiple undergraduate students worked on different aspects of the platform over successive academic terms.
+- The diorama provided a shared physical environment for developing, integrating, testing, and demonstrating student work.
+- Students communicated term results in conference-style presentations, connecting hands-on development with formal knowledge sharing.
+
 ## Physical system
 
 - HO-scale railway diorama with a high level of scenic detail.
@@ -48,6 +55,7 @@ This file is the working content reference for the website. Approximate values a
 ## Editorial guidance
 
 - Use “approximately 30 modular sections” rather than an exact count.
+- Describe individual module identifiers generically. Do not publish a specific module number in site copy, captions, or alternative text.
 - Clearly separate original research concepts from equipment currently included.
 - Do not reintroduce a Google Photos dependency. Production images belong in `public/images/`.
 - Reconcile these notes and the website with the final one-pager once approved.

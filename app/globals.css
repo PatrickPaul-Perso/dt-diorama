@@ -249,6 +249,21 @@ svg { width: 1.25rem; fill: none; stroke: currentColor; stroke-linecap: round; s
 .theme-card ul { display: flex; flex-wrap: wrap; gap: .5rem; padding: 0; margin: 2rem 0 0; list-style: none; }
 .theme-card li { border: 1px solid rgba(50,213,228,.28); background: rgba(50,213,228,.045); padding: .45rem .65rem; color: #b8c9ce; font: .68rem var(--font-geist-mono), monospace; text-transform: uppercase; letter-spacing: .06em; }
 
+.academic {
+  display: grid;
+  grid-template-columns: minmax(320px, .82fr) minmax(420px, 1.18fr);
+  gap: 6vw;
+  align-items: center;
+  background: #0b1924;
+}
+.academic-copy h2 { font-size: clamp(2.7rem, 4.2vw, 4.8rem); }
+.academic-copy .large-copy { margin-top: 2rem; font-size: clamp(1.2rem, 1.65vw, 1.65rem); }
+.academic-copy > p:last-child { margin: 1.6rem 0 0; color: #9fadb4; font-size: 1rem; line-height: 1.75; }
+.academic-visual { position: relative; margin: 0; overflow: hidden; background: #050a0f; }
+.academic-visual img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; filter: saturate(.82) contrast(1.05); }
+.academic-visual figcaption { position: absolute; inset: auto 0 0; padding: 2.8rem 1.2rem 1.1rem; background: linear-gradient(transparent, rgba(2,7,11,.92)); color: #d7dee0; font-size: .82rem; }
+.academic-visual figcaption span { display: block; margin-bottom: .35rem; color: var(--cyan); font: .62rem var(--font-geist-mono), monospace; letter-spacing: .12em; text-transform: uppercase; }
+
 .scenes { background: #071018; }
 .scenes-heading { max-width: 880px; }
 .scenes-heading > p:last-child { max-width: 590px; margin: 1.7rem 0 0; color: var(--muted); line-height: 1.7; }
@@ -384,7 +399,7 @@ footer > a:last-child:hover { color: var(--cyan); }
   .hero-facts > div:nth-child(3) { border-left: none; }
   .photo-link { position: static; margin: 1.25rem; }
   .section { padding: 6rem 1.25rem; }
-  .intro, .tech-heading, .scene-layout, .transfer { grid-template-columns: 1fr; gap: 3.5rem; }
+  .intro, .tech-heading, .academic, .scene-layout, .transfer { grid-template-columns: 1fr; gap: 3.5rem; }
   .intro-copy { padding-top: 0; }
   .theme-grid { grid-template-columns: 1fr; }
   .theme-card, .theme-card:nth-child(even), .theme-card:nth-child(n+3) { border-left: 0; border-top: 1px solid var(--line); padding: 2rem 0; }
