@@ -255,11 +255,14 @@ export default function Home() {
       <section className="hero" id="overview">
         <header className="site-header">
           <a className="wordmark" href="#overview" aria-label={content.homeLabel}><span className="signal-dot" />Research Rail Diorama</a>
-          <nav aria-label={content.navigationLabel}>
-            <a className="active" href="#overview">{content.nav[0]}</a>
-            <a href="#technology">{content.nav[1]}</a>
-            <a href="#transfer">{content.nav[2]}</a>
-          </nav>
+          <div className="header-actions">
+            <nav aria-label={content.navigationLabel}>
+              <a className="active" href="#overview">{content.nav[0]}</a>
+              <a href="#technology">{content.nav[1]}</a>
+              <a href="#transfer">{content.nav[2]}</a>
+            </nav>
+            <button className="language-toggle" type="button" onClick={toggleLanguage} aria-label={content.switchLabel}><span aria-hidden="true">文/A</span>{content.switchLanguage}</button>
+          </div>
         </header>
 
         <img className="hero-image" src="/images/diorama-mountain.jpg" alt={content.heroAlt} />
@@ -358,7 +361,6 @@ export default function Home() {
         <div className="footer-brand"><a className="wordmark" href="#overview"><span className="signal-dot" />Research Rail Diorama</a><p>{content.footerStatement}</p></div>
         <aside className="ai-notice" aria-labelledby="ai-notice-title"><span className="ai-mark" aria-hidden="true">AI</span><div><strong id="ai-notice-title">{content.aiTitle}</strong><p>{content.aiNotice}</p></div></aside>
         <div className="footer-actions">
-          <button className="language-toggle" type="button" onClick={toggleLanguage} aria-label={content.switchLabel}><span aria-hidden="true">文/A</span>{content.switchLanguage}</button>
           <a href="#overview">{content.backToTop}</a>
         </div>
       </footer>
