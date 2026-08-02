@@ -237,6 +237,10 @@ export default function Home() {
               <figcaption><span>Adjustable</span> Module 29 and its levelling points</figcaption>
             </figure>
             <figure>
+              <img src="/images/module-identification-evidence.jpg" alt="Cropped underside view showing the embossed number 29 on a diorama module" />
+              <figcaption><span>Identified</span> Embossed module numbering</figcaption>
+            </figure>
+            <figure>
               <img src="/images/transport-crates.jpg" alt="Custom transport crates containing modular diorama sections" />
               <figcaption><span>Protected</span> Matching transport crates</figcaption>
             </figure>
