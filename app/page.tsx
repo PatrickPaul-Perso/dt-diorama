@@ -34,12 +34,48 @@ const researchThemes = [
 ];
 
 const scenes = [
-  ["01", "Capital station", "An Ottawa-inspired passenger station and passenger rail setting."],
-  ["02", "Mountain passage", "Tunnels, bridge, forest, winter and autumn terrain, plus a ski lift and chalet."],
-  ["03", "Urban corridor", "A Montréal-inspired city scene with a station running beneath the hotel."],
-  ["04", "Port and rail yard", "Container handling, switching tracks and a port setting recalling Montréal."],
-  ["05", "Prairie industry", "A grain elevator, wheat field and agricultural buildings linked to the railway."],
-  ["06", "Industrial district", "Liquid storage tanks, roads, a level crossing and freight infrastructure."],
+  {
+    number: "01",
+    title: "Capital station",
+    text: "An Ottawa-inspired passenger station and passenger rail setting.",
+    image: "/images/scene-capital-station.jpg",
+    alt: "Ottawa-inspired stone passenger station on the diorama",
+  },
+  {
+    number: "02",
+    title: "Mountain passage",
+    text: "Tunnels, bridge, forest, winter and autumn terrain, plus a ski lift and chalet.",
+    image: "/images/scene-mountain-passage.jpg",
+    alt: "Freight train crossing the bridge between two mountain tunnels",
+  },
+  {
+    number: "03",
+    title: "Urban corridor",
+    text: "A Montréal-inspired city scene with a station running beneath the hotel.",
+    image: "/images/scene-urban-corridor.jpg",
+    alt: "Montréal-inspired urban corridor with buildings, curved track and street scene",
+  },
+  {
+    number: "04",
+    title: "Port and rail yard",
+    text: "Container handling, switching tracks and a port setting recalling Montréal.",
+    image: "/images/scene-port-rail-yard.jpg",
+    alt: "Yellow container gantry spanning the switching tracks beside the port",
+  },
+  {
+    number: "05",
+    title: "Prairie industry",
+    text: "A grain elevator, wheat field and agricultural buildings linked to the railway.",
+    image: "/images/scene-prairie-industry.jpg",
+    alt: "Grain elevator beside railway tracks and the surrounding miniature landscape",
+  },
+  {
+    number: "06",
+    title: "Industrial district",
+    text: "Liquid storage tanks, roads, a level crossing and freight infrastructure.",
+    image: "/images/scene-industrial-district.jpg",
+    alt: "Industrial district with storage tanks, roads, railway tracks and city buildings",
+  },
 ];
 
 const included = [
@@ -181,10 +217,11 @@ export default function Home() {
             <figcaption><span>Actual diorama</span> Mountain and tunnel zone</figcaption>
           </figure>
           <div className="scene-list">
-            {scenes.map(([number, title, text]) => (
-              <article key={number}>
-                <span>{number}</span>
-                <div><h3>{title}</h3><p>{text}</p></div>
+            {scenes.map((scene) => (
+              <article key={scene.number}>
+                <span>{scene.number}</span>
+                <img src={scene.image} alt={scene.alt} loading="lazy" />
+                <div><h3>{scene.title}</h3><p>{scene.text}</p></div>
               </article>
             ))}
             <aside className="route-note">

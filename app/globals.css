@@ -268,8 +268,9 @@ svg { width: 1.25rem; fill: none; stroke: currentColor; stroke-linecap: round; s
 }
 .scene-image-wrap figcaption span, .image-label span { display: block; margin-bottom: .35rem; color: var(--cyan); font: .62rem var(--font-geist-mono), monospace; letter-spacing: .12em; text-transform: uppercase; }
 .scene-list { border-top: 1px solid var(--line); }
-.scene-list article { display: grid; grid-template-columns: 52px 1fr; gap: 1.2rem; padding: 1.65rem 0; border-bottom: 1px solid var(--line); }
+.scene-list article { display: grid; grid-template-columns: 42px 132px 1fr; gap: 1.2rem; align-items: start; padding: 1.35rem 0; border-bottom: 1px solid var(--line); }
 .scene-list article > span { color: var(--cyan); font: .68rem var(--font-geist-mono), monospace; }
+.scene-list article > img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; filter: saturate(.82) contrast(1.06); }
 .scene-list h3 { margin: -.2rem 0 .55rem; font-size: 1.18rem; font-weight: 580; }
 .scene-list p { margin: 0; color: #8e9ba2; font-size: .9rem; line-height: 1.6; }
 .route-note { margin-top: 2rem; padding: 1.7rem; border: 1px solid rgba(50,213,228,.24); background: rgba(50,213,228,.045); }
@@ -404,6 +405,10 @@ footer > a:last-child:hover { color: var(--cyan); }
   .transfer-specs div { grid-template-columns: 1fr; gap: .35rem; }
   .transfer-visual { padding: 0; display: grid; grid-template-columns: 1fr; gap: .8rem; }
   .transfer-inset { position: relative; width: 55%; margin-left: auto; border-width: 3px; }
+  .scene-list article { grid-template-columns: 34px 1fr; gap: .9rem; }
+  .scene-list article > img, .scene-list article > div { grid-column: 2; }
+  .scene-list article > img { grid-row: 1; }
+  .scene-list article > div { grid-row: 2; }
 }
 
 @media (prefers-reduced-motion: reduce) {
