@@ -34,4 +34,7 @@ test("renders the academic story without publishing a specific module identifier
   assert.match(html, /Multiple undergraduate students contributed/i);
   assert.match(html, /student-conference-presentation\.jpg/i);
   assert.doesNotMatch(html, /\bmodule\s+29\b/i);
+  assert.match(html, /AI-assisted production/i);
+  assert.match(html, /Generative AI tools supported the production of this website/i);
+  assert.match(html, /Afficher le site en français/i);
 });
