@@ -17,7 +17,7 @@ Deployments:
 - Transfer package, including approximately 30 modular sections and their transport crates
 - Corrected table structure: two table sections, ten wheeled legs, and three additional centre-span supports
 - Locally stored production images with no Google Photos runtime dependency
-- Printable English and French one-page summaries linked directly from the bilingual website
+- Printable English and French one-page summaries linked directly from the bilingual website, with their editable Word sources retained in the repository
 
 ## Repository structure
 
@@ -27,7 +27,7 @@ Dockerfile                 Multi-stage Node.js build and Apache runtime image
 .dockerignore              Files excluded from the container build context
 public/images/             Production images used by the site
 public/documents/          Printable PDF summaries served by the site
-documents/one-pager/       Working source and supporting one-pager materials
+documents/one-pager/       Editable English and French Word one-pagers
 project-notes/             Confirmed project facts and editorial guidance
 tests/                     Rendered-output checks
 .openai/hosting.json       ChatGPT Sites project association

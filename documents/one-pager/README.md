@@ -5,7 +5,12 @@ The finalized English and French PDF summaries are published with the website:
 - `public/documents/diorama-one-pager-en.pdf`
 - `public/documents/diorama-one-pager-fr.pdf`
 
-Their editable source documents are maintained separately. When revising either PDF, review its wording and specifications against:
+Their editable Word source documents are retained in this directory even though the website does not link to them directly:
+
+- `documents/one-pager/diorama-one-pager-en.docx`
+- `documents/one-pager/diorama-one-pager-fr.docx`
+
+When revising a one-pager, apply the same content changes to both its Word and PDF versions, then review its wording and specifications against:
 
 - `project-notes/confirmed-details.md`
 - `app/page.tsx`
