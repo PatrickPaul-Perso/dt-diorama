@@ -1,0 +1,8 @@
+.git
+.next
+apache-export
+dist
+node_modules
+out
+work
+*.log

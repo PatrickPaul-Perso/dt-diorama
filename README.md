@@ -23,6 +23,8 @@ Deployments:
 
 ```text
 app/                       Main page and site styling
+Dockerfile                 Multi-stage Node.js build and Apache runtime image
+.dockerignore              Files excluded from the container build context
 public/images/             Production images used by the site
 public/documents/          Printable PDF summaries served by the site
 documents/one-pager/       Working source and supporting one-pager materials
@@ -59,6 +61,97 @@ npm run test:pages
 The `Deploy GitHub Pages` workflow publishes the `out/` directory whenever a
 change is pushed to `main`. The Pages build uses `/dt-diorama` as its base path;
 the ChatGPT Sites build continues to use the domain root.
+
+## Containerized Apache preview
+
+This workflow requires Git and Docker only. Node.js and npm run inside the
+container build and do not need to be installed on the Linux host.
+
+Clone the repository and build the image from its root directory:
+
+```bash
+git clone git@github.com:PatrickPaul-Perso/dt-diorama.git
+cd dt-diorama
+docker build --tag dt-diorama:local .
+```
+
+The Dockerfile uses two stages:
+
+1. `node:22-bookworm-slim` installs the locked dependencies and generates the
+   static Next.js export.
+2. `httpd:2.4-alpine` contains only Apache and the generated static site.
+
+Start a disposable local Apache container:
+
+```bash
+docker run --detach --rm \
+  --name dt-diorama-local \
+  --publish 8080:80 \
+  dt-diorama:local
+```
+
+Open http://localhost:8080/dt-diorama/ and verify the server and printable PDFs:
+
+```bash
+docker ps --filter name=dt-diorama-local
+docker logs dt-diorama-local
+curl --head http://localhost:8080/dt-diorama/
+curl --head http://localhost:8080/dt-diorama/documents/diorama-one-pager-en.pdf
+curl --head http://localhost:8080/dt-diorama/documents/diorama-one-pager-fr.pdf
+```
+
+Stop the test container when finished. Docker removes it automatically because
+it was started with `--rm`:
+
+```bash
+docker stop dt-diorama-local
+```
+
+After pulling a newer repository version, rebuild the image and start a new
+test container:
+
+```bash
+git pull --ff-only
+docker build --pull --tag dt-diorama:local .
+docker run --detach --rm \
+  --name dt-diorama-local \
+  --publish 8080:80 \
+  dt-diorama:local
+```
+
+## Exporting for another Apache server
+
+The generated files can be extracted from the tested image without installing
+Node.js or npm on either the build host or the destination web server:
+
+```bash
+mkdir -p apache-export
+docker create --name dt-diorama-export dt-diorama:local
+docker cp \
+  dt-diorama-export:/usr/local/apache2/htdocs/dt-diorama/. \
+  ./apache-export/
+docker rm dt-diorama-export
+```
+
+Copy the contents of `apache-export/` to the destination Apache server under
+its `/dt-diorama/` URL path. For a standard document root, an example target is:
+
+```text
+/var/www/html/dt-diorama/
+```
+
+The current static build intentionally uses `/dt-diorama` as its base path for
+GitHub Pages compatibility. It must therefore be published at a URL such as
+`https://example.org/dt-diorama/`. Hosting it directly at the root of another
+domain requires a root-path build configuration followed by a new image build.
+
+After copying the files, verify at least the page and both PDF documents:
+
+```bash
+curl --head https://example.org/dt-diorama/
+curl --head https://example.org/dt-diorama/documents/diorama-one-pager-en.pdf
+curl --head https://example.org/dt-diorama/documents/diorama-one-pager-fr.pdf
+```
 
 ## Content status
 
