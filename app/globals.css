@@ -156,6 +156,8 @@ svg { width: 1.25rem; fill: none; stroke: currentColor; stroke-linecap: round; s
 .button:hover svg { transform: translateX(4px); }
 .button-primary { background: var(--cyan); color: #021015; border: 1px solid var(--cyan); }
 .button-primary:hover { background: #6ae7f0; }
+.button-secondary { color: var(--cyan); border: 1px solid rgba(50,213,228,.58); background: rgba(2,6,9,.22); }
+.button-secondary:hover { color: #021015; border-color: var(--cyan); background: var(--cyan); }
 .button-quiet { color: var(--cyan); border-bottom: 1px solid var(--cyan); }
 .button-quiet:hover { color: white; border-color: white; }
 .audience-note {
@@ -374,7 +376,6 @@ svg { width: 1.25rem; fill: none; stroke: currentColor; stroke-linecap: round; s
 .cta h2 { max-width: 860px; }
 .cta > p:not(.section-kicker) { max-width: 700px; margin: 1.7rem auto 0; color: #a9b6bc; font-size: 1.08rem; line-height: 1.75; }
 .cta-actions { display: flex; align-items: center; gap: 1.7rem; margin-top: 2.2rem; }
-.coming-soon { color: #86959c; font: .7rem var(--font-geist-mono), monospace; letter-spacing: .1em; text-transform: uppercase; }
 
 footer { min-height: 160px; padding: 2rem 3.5vw; display: grid; grid-template-columns: minmax(230px, .8fr) minmax(360px, 1.4fr) auto; gap: clamp(1.5rem, 4vw, 4.5rem); align-items: center; border-top: 1px solid var(--line); background: #020609; color: #8b989e; font-size: .72rem; }
 .footer-brand { display: grid; gap: .9rem; }

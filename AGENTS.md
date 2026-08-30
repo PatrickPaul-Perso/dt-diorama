@@ -52,4 +52,4 @@ After making changes:
 
 If the live hosted website differs from GitHub, use GitHub `main` as the baseline. Do not copy live-site differences back into the repository unless the user explicitly asks to preserve or reconcile those differences.
 
-If project conversation details, the developing one-pager, and the repository disagree, flag the conflict before replacing confirmed repository content. Approximate values may remain approximate when the exact inventory is not finalized.
+If project conversation details, the published one-page summaries, and the repository disagree, treat the website content on `main` as the primary public reference and flag the conflict before replacing confirmed repository content. Approximate values may remain approximate when the exact inventory is not finalized.

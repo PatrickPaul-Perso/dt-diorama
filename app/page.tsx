@@ -113,7 +113,8 @@ const copy = {
     ctaTitle: "Give this platform its next chapter.",
     ctaText: "The diorama could become a museum exhibit, an academic teaching and research platform, or the centrepiece of a model railway organization. Its modular construction preserves the option to reinterpret the digital stories while keeping the completed Canadian landscape intact.",
     highlights: "Review the diorama highlights",
-    comingSoon: "Detailed one-pager · Coming soon",
+    onePager: "View the printable one-page summary (PDF)",
+    onePagerHref: "/documents/diorama-one-pager-en.pdf",
     footerStatement: "Originally created to demonstrate research capabilities in Digital Technologies.",
     footerBrand: "Research Rail Diorama",
     backToTop: "Back to top ↑",
@@ -218,7 +219,8 @@ const copy = {
     ctaTitle: "Donnez un nouveau chapitre à cette plateforme.",
     ctaText: "Le diorama pourrait devenir une exposition muséale, une plateforme universitaire d'enseignement et de recherche ou la pièce maîtresse d'une organisation de modélisme ferroviaire. Sa construction modulaire permet de réinterpréter les récits numériques tout en préservant le paysage canadien achevé.",
     highlights: "Voir les points saillants du diorama",
-    comingSoon: "Document détaillé · À venir",
+    onePager: "Consulter le document synthèse imprimable (PDF)",
+    onePagerHref: "/documents/diorama-one-pager-fr.pdf",
     footerStatement: "Créé à l'origine pour démontrer des capacités de recherche en technologies numériques.",
     footerBrand: "Diorama ferroviaire de recherche",
     backToTop: "Retour en haut ↑",
@@ -359,7 +361,10 @@ export default function Home() {
 
       <section className="cta section">
         <div className="cta-grid" aria-hidden="true" /><p className="section-kicker">{content.ctaKicker}</p><h2>{content.ctaTitle}</h2><p>{content.ctaText}</p>
-        <div className="cta-actions"><a className="button button-primary" href="#scenes">{content.highlights} <ArrowIcon /></a><span className="coming-soon">{content.comingSoon}</span></div>
+        <div className="cta-actions">
+          <a className="button button-primary" href="#scenes">{content.highlights} <ArrowIcon /></a>
+          <a className="button button-secondary" href={assetPath(content.onePagerHref)} target="_blank" rel="noopener noreferrer">{content.onePager} <ArrowIcon /></a>
+        </div>
       </section>
 
       <footer>

@@ -1,16 +1,14 @@
-# One-pager
+# One-page summaries
 
-The transfer one-pager is still under development.
+The finalized English and French PDF summaries are published with the website:
 
-When finalized, store the editable source and published PDF in this directory. Review the final wording and specifications against:
+- `public/documents/diorama-one-pager-en.pdf`
+- `public/documents/diorama-one-pager-fr.pdf`
+
+Their editable source documents are maintained separately. When revising either PDF, review its wording and specifications against:
 
 - `project-notes/confirmed-details.md`
 - `app/page.tsx`
 - the transfer and equipment descriptions shown on the live site
 
-Use descriptive filenames, for example:
-
-```text
-dt-diorama-transfer-one-pager.docx
-dt-diorama-transfer-one-pager.pdf
-```
+The website remains the primary public reference. These PDFs are supporting documents intended for convenient review and printing. Preserve their stable public filenames when publishing revisions so existing links continue to work.

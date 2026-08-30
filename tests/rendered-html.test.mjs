@@ -38,6 +38,8 @@ test("renders the academic story without publishing a specific module identifier
   assert.match(html, /AI-assisted production/i);
   assert.match(html, /Generative AI tools supported the production of this website/i);
   assert.match(html, /Afficher le site en français/i);
+  assert.match(html, /View the printable one-page summary \(PDF\)/i);
+  assert.match(html, /\/documents\/diorama-one-pager-en\.pdf/i);
 });
 
 test("localizes the footer brand link", async () => {
@@ -49,4 +51,16 @@ test("localizes the footer brand link", async () => {
   assert.match(source, /footerBrand: "Research Rail Diorama"/);
   assert.match(source, /footerBrand: "Diorama ferroviaire de recherche"/);
   assert.match(source, /\{content\.footerBrand\}<\/a>/);
+});
+
+test("links each language to its corresponding printable PDF", async () => {
+  const source = await readFile(
+    new URL("../app/page.tsx", import.meta.url),
+    "utf8",
+  );
+
+  assert.match(source, /onePagerHref: "\/documents\/diorama-one-pager-en\.pdf"/);
+  assert.match(source, /onePagerHref: "\/documents\/diorama-one-pager-fr\.pdf"/);
+  assert.match(source, /Consulter le document synthèse imprimable \(PDF\)/);
+  assert.doesNotMatch(source, /one-pager · Coming soon|Document détaillé · À venir/);
 });

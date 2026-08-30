@@ -17,14 +17,15 @@ Deployments:
 - Transfer package, including approximately 30 modular sections and their transport crates
 - Corrected table structure: two table sections, ten wheeled legs, and three additional centre-span supports
 - Locally stored production images with no Google Photos runtime dependency
-- Placeholder structure for the one-pager under `documents/one-pager/`
+- Printable English and French one-page summaries linked directly from the bilingual website
 
 ## Repository structure
 
 ```text
 app/                       Main page and site styling
 public/images/             Production images used by the site
-documents/one-pager/       One-pager source and exports when finalized
+public/documents/          Printable PDF summaries served by the site
+documents/one-pager/       Working source and supporting one-pager materials
 project-notes/             Confirmed project facts and editorial guidance
 tests/                     Rendered-output checks
 .openai/hosting.json       ChatGPT Sites project association
@@ -63,4 +64,4 @@ the ChatGPT Sites build continues to use the domain root.
 
 The website uses **approximately 30 modules** intentionally because the exact inventory count remains approximate. Research examples are described as the platform's original demonstration concepts. Computers, cameras, networking equipment, and sensors are not represented as included transfer equipment.
 
-The unfinished one-pager will be reconciled with the website once its content is finalized.
+The website is the primary public reference. Its English and French one-page PDF summaries are supporting printable documents and are available from the corresponding language version of the site.

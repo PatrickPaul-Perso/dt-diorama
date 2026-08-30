@@ -13,6 +13,10 @@ await Promise.all([
   access(new URL("../out/favicon.svg", import.meta.url)),
   access(new URL("../out/images/diorama-mountain.jpg", import.meta.url)),
   access(new URL("../out/images/scene-capital-station.jpg", import.meta.url)),
+  access(new URL("../out/documents/diorama-one-pager-en.pdf", import.meta.url)),
+  access(new URL("../out/documents/diorama-one-pager-fr.pdf", import.meta.url)),
 ]);
+
+assert.match(html, /\/dt-diorama\/documents\/diorama-one-pager-en\.pdf/i);
 
 console.log("Validated GitHub Pages export and /dt-diorama asset paths.");
