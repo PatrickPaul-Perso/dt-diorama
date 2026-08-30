@@ -31,10 +31,22 @@ When making changes:
 After making changes:
 
 1. Run the relevant build, validation, or tests.
+   - Run `npm test` for the ChatGPT Sites output when site source changes.
+   - Run `npm run test:pages` when a change could affect the GitHub Pages export.
 2. Commit the completed changes to GitHub with a clear message.
 3. Push the changes to the appropriate branch.
 4. Update or redeploy the hosted site from the repository when deployment is part of the request.
 5. Report the commit or pull request and any deployment status.
+
+## Deployment targets
+
+- GitHub Pages publishes the static export at
+  `https://patrickpaul-perso.github.io/dt-diorama/` from the workflow in
+  `.github/workflows/pages.yml`.
+- ChatGPT Sites remains a separate deployment target and continues to build
+  from the domain root.
+- Preserve both targets. GitHub-specific path handling must be conditional and
+  must not break the ChatGPT Sites build.
 
 ## Reconciliation rule
 

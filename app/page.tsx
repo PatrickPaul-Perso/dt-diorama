@@ -5,6 +5,9 @@ import SceneGallery from "./SceneGallery";
 
 type Language = "en" | "fr";
 
+const assetPath = (path: string) =>
+  `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${path}`;
+
 function ArrowIcon() {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -58,12 +61,12 @@ const copy = {
     actualDiorama: "Actual diorama",
     mountainCaption: "Mountain and tunnel zone",
     scenes: [
-      { number: "01", title: "Capital station", text: "An Ottawa-inspired passenger station and passenger rail setting.", image: "/images/scene-capital-station.jpg", alt: "Ottawa-inspired Capital Station behind a landscaped rail curve and stone bridge" },
-      { number: "02", title: "Mountain passage", text: "Tunnels, bridge, forest, winter and autumn terrain, plus a ski lift and chalet.", image: "/images/scene-mountain-passage.jpg", alt: "Freight train crossing the bridge between two mountain tunnels" },
-      { number: "03", title: "Urban corridor", text: "A Montréal-inspired city scene with a station running beneath the hotel.", image: "/images/scene-urban-corridor.jpg", alt: "Montréal-inspired urban corridor with buildings, curved track and street scene" },
-      { number: "04", title: "Port and rail yard", text: "Container handling, switching tracks and a port setting recalling Montréal.", image: "/images/scene-port-rail-yard.jpg", alt: "Yellow container gantry spanning the switching tracks beside the port" },
-      { number: "05", title: "Prairie industry", text: "A grain elevator, wheat field and agricultural buildings linked to the railway.", image: "/images/scene-prairie-industry.jpg", alt: "Grain elevator beside railway tracks and the surrounding miniature landscape" },
-      { number: "06", title: "Industrial district", text: "Liquid storage tanks, roads, a level crossing and freight infrastructure.", image: "/images/scene-industrial-district.jpg", alt: "Industrial district with storage tanks, roads, railway tracks and city buildings" },
+      { number: "01", title: "Capital station", text: "An Ottawa-inspired passenger station and passenger rail setting.", image: assetPath("/images/scene-capital-station.jpg"), alt: "Ottawa-inspired Capital Station behind a landscaped rail curve and stone bridge" },
+      { number: "02", title: "Mountain passage", text: "Tunnels, bridge, forest, winter and autumn terrain, plus a ski lift and chalet.", image: assetPath("/images/scene-mountain-passage.jpg"), alt: "Freight train crossing the bridge between two mountain tunnels" },
+      { number: "03", title: "Urban corridor", text: "A Montréal-inspired city scene with a station running beneath the hotel.", image: assetPath("/images/scene-urban-corridor.jpg"), alt: "Montréal-inspired urban corridor with buildings, curved track and street scene" },
+      { number: "04", title: "Port and rail yard", text: "Container handling, switching tracks and a port setting recalling Montréal.", image: assetPath("/images/scene-port-rail-yard.jpg"), alt: "Yellow container gantry spanning the switching tracks beside the port" },
+      { number: "05", title: "Prairie industry", text: "A grain elevator, wheat field and agricultural buildings linked to the railway.", image: assetPath("/images/scene-prairie-industry.jpg"), alt: "Grain elevator beside railway tracks and the surrounding miniature landscape" },
+      { number: "06", title: "Industrial district", text: "Liquid storage tanks, roads, a level crossing and freight infrastructure.", image: assetPath("/images/scene-industrial-district.jpg"), alt: "Industrial district with storage tanks, roads, railway tracks and city buildings" },
     ],
     gallery: {
       open: "Open full-size image",
@@ -162,12 +165,12 @@ const copy = {
     actualDiorama: "Diorama réel",
     mountainCaption: "Zone de montagne et de tunnels",
     scenes: [
-      { number: "01", title: "Gare de la capitale", text: "Une gare de passagers inspirée d'Ottawa dans un environnement ferroviaire voyageurs.", image: "/images/scene-capital-station.jpg", alt: "Gare de la capitale inspirée d'Ottawa derrière une courbe ferroviaire paysagée et un pont de pierre" },
-      { number: "02", title: "Passage en montagne", text: "Des tunnels, un pont, une forêt, des paysages d'hiver et d'automne, ainsi qu'une remontée mécanique et un chalet.", image: "/images/scene-mountain-passage.jpg", alt: "Train de marchandises traversant le pont entre deux tunnels en montagne" },
-      { number: "03", title: "Corridor urbain", text: "Une scène urbaine inspirée de Montréal avec une gare sous l'hôtel.", image: "/images/scene-urban-corridor.jpg", alt: "Corridor urbain inspiré de Montréal avec immeubles, voie courbe et scène de rue" },
-      { number: "04", title: "Port et cour de triage", text: "Manutention de conteneurs, voies de triage et environnement portuaire évoquant Montréal.", image: "/images/scene-port-rail-yard.jpg", alt: "Portique jaune de manutention de conteneurs au-dessus des voies de triage près du port" },
-      { number: "05", title: "Industrie des Prairies", text: "Un élévateur à grain, un champ de blé et des bâtiments agricoles reliés au chemin de fer.", image: "/images/scene-prairie-industry.jpg", alt: "Élévateur à grain près des voies ferrées et du paysage miniature environnant" },
-      { number: "06", title: "Secteur industriel", text: "Des réservoirs de liquides, des routes, un passage à niveau et des infrastructures de fret.", image: "/images/scene-industrial-district.jpg", alt: "Secteur industriel avec réservoirs, routes, voies ferrées et immeubles urbains" },
+      { number: "01", title: "Gare de la capitale", text: "Une gare de passagers inspirée d'Ottawa dans un environnement ferroviaire voyageurs.", image: assetPath("/images/scene-capital-station.jpg"), alt: "Gare de la capitale inspirée d'Ottawa derrière une courbe ferroviaire paysagée et un pont de pierre" },
+      { number: "02", title: "Passage en montagne", text: "Des tunnels, un pont, une forêt, des paysages d'hiver et d'automne, ainsi qu'une remontée mécanique et un chalet.", image: assetPath("/images/scene-mountain-passage.jpg"), alt: "Train de marchandises traversant le pont entre deux tunnels en montagne" },
+      { number: "03", title: "Corridor urbain", text: "Une scène urbaine inspirée de Montréal avec une gare sous l'hôtel.", image: assetPath("/images/scene-urban-corridor.jpg"), alt: "Corridor urbain inspiré de Montréal avec immeubles, voie courbe et scène de rue" },
+      { number: "04", title: "Port et cour de triage", text: "Manutention de conteneurs, voies de triage et environnement portuaire évoquant Montréal.", image: assetPath("/images/scene-port-rail-yard.jpg"), alt: "Portique jaune de manutention de conteneurs au-dessus des voies de triage près du port" },
+      { number: "05", title: "Industrie des Prairies", text: "Un élévateur à grain, un champ de blé et des bâtiments agricoles reliés au chemin de fer.", image: assetPath("/images/scene-prairie-industry.jpg"), alt: "Élévateur à grain près des voies ferrées et du paysage miniature environnant" },
+      { number: "06", title: "Secteur industriel", text: "Des réservoirs de liquides, des routes, un passage à niveau et des infrastructures de fret.", image: assetPath("/images/scene-industrial-district.jpg"), alt: "Secteur industriel avec réservoirs, routes, voies ferrées et immeubles urbains" },
     ],
     gallery: {
       open: "Ouvrir l'image en pleine grandeur",
@@ -265,7 +268,7 @@ export default function Home() {
           </div>
         </header>
 
-        <img className="hero-image" src="/images/diorama-mountain.jpg" alt={content.heroAlt} />
+        <img className="hero-image" src={assetPath("/images/diorama-mountain.jpg")} alt={content.heroAlt} />
         <div className="hero-shade" />
         <div className="data-grid data-grid-one" aria-hidden="true" />
         <div className="hero-content">
@@ -307,24 +310,24 @@ export default function Home() {
 
       <section className="academic section" id="academic">
         <div className="academic-copy"><p className="section-kicker">{content.academicKicker}</p><h2>{content.academicTitle}</h2><p className="large-copy">{content.academicLarge}</p><p>{content.academicBody}</p></div>
-        <figure className="academic-visual"><img src="/images/student-conference-presentation.jpg" alt={content.academicAlt} /><figcaption><span>{content.academicLabel}</span>{content.academicCaption}</figcaption></figure>
+        <figure className="academic-visual"><img src={assetPath("/images/student-conference-presentation.jpg")} alt={content.academicAlt} /><figcaption><span>{content.academicLabel}</span>{content.academicCaption}</figcaption></figure>
       </section>
 
       <section className="scenes section" id="scenes">
         <div className="section-heading scenes-heading"><p className="section-kicker">{content.scenesKicker}</p><h2>{content.scenesTitle}</h2><p>{content.scenesIntro}</p></div>
         <div className="scene-layout">
-          <figure className="scene-image-wrap"><img src="/images/diorama-mountain.jpg" alt={content.mountainAlt} /><figcaption><span>{content.actualDiorama}</span>{content.mountainCaption}</figcaption></figure>
+          <figure className="scene-image-wrap"><img src={assetPath("/images/diorama-mountain.jpg")} alt={content.mountainAlt} /><figcaption><span>{content.actualDiorama}</span>{content.mountainCaption}</figcaption></figure>
           <SceneGallery scenes={[...content.scenes]} labels={content.gallery} />
         </div>
       </section>
 
       <section className="transfer section" id="transfer">
         <div className="transfer-visual">
-          <figure className="transfer-main"><img src="/images/table-support-system.png" alt={content.transfer.mainAlt} /><figcaption className="image-label"><span>{content.transfer.mainLabel}</span>{content.transfer.mainCaption}</figcaption></figure>
+          <figure className="transfer-main"><img src={assetPath("/images/table-support-system.png")} alt={content.transfer.mainAlt} /><figcaption className="image-label"><span>{content.transfer.mainLabel}</span>{content.transfer.mainCaption}</figcaption></figure>
           <div className="transfer-details">
-            <figure><img src="/images/table-leveling-detail.jpg" alt={content.transfer.levelAlt} /><figcaption><span>{content.transfer.levelLabel}</span>{content.transfer.levelCaption}</figcaption></figure>
-            <figure><img src="/images/module-identification-evidence.jpg" alt={content.transfer.idAlt} /><figcaption><span>{content.transfer.idLabel}</span>{content.transfer.idCaption}</figcaption></figure>
-            <figure><img src="/images/transport-crates.jpg" alt={content.transfer.crateAlt} /><figcaption><span>{content.transfer.crateLabel}</span>{content.transfer.crateCaption}</figcaption></figure>
+            <figure><img src={assetPath("/images/table-leveling-detail.jpg")} alt={content.transfer.levelAlt} /><figcaption><span>{content.transfer.levelLabel}</span>{content.transfer.levelCaption}</figcaption></figure>
+            <figure><img src={assetPath("/images/module-identification-evidence.jpg")} alt={content.transfer.idAlt} /><figcaption><span>{content.transfer.idLabel}</span>{content.transfer.idCaption}</figcaption></figure>
+            <figure><img src={assetPath("/images/transport-crates.jpg")} alt={content.transfer.crateAlt} /><figcaption><span>{content.transfer.crateLabel}</span>{content.transfer.crateCaption}</figcaption></figure>
           </div>
         </div>
         <div className="transfer-copy">
@@ -345,10 +348,10 @@ export default function Home() {
       <section className="process section" id="process">
         <div className="section-heading process-heading"><p className="section-kicker">{content.processKicker}</p><h2>{content.processTitle}</h2></div>
         <div className="process-grid">
-          <figure className="process-large"><img src="/images/terrain-fabrication.jpg" alt={content.processAlt[0]} /><figcaption><span>01</span>{content.process[0]}</figcaption></figure>
-          <figure><img src="/images/terrain-cad.jpg" alt={content.processAlt[1]} /><figcaption><span>02</span>{content.process[1]}</figcaption></figure>
-          <figure className="crop-person"><img src="/images/module-fabrication.jpg" alt={content.processAlt[2]} /><figcaption><span>03</span>{content.process[2]}</figcaption></figure>
-          <figure><img src="/images/table-support-system.png" alt={content.processAlt[3]} /><figcaption><span>04</span>{content.process[3]}</figcaption></figure>
+          <figure className="process-large"><img src={assetPath("/images/terrain-fabrication.jpg")} alt={content.processAlt[0]} /><figcaption><span>01</span>{content.process[0]}</figcaption></figure>
+          <figure><img src={assetPath("/images/terrain-cad.jpg")} alt={content.processAlt[1]} /><figcaption><span>02</span>{content.process[1]}</figcaption></figure>
+          <figure className="crop-person"><img src={assetPath("/images/module-fabrication.jpg")} alt={content.processAlt[2]} /><figcaption><span>03</span>{content.process[2]}</figcaption></figure>
+          <figure><img src={assetPath("/images/table-support-system.png")} alt={content.processAlt[3]} /><figcaption><span>04</span>{content.process[3]}</figcaption></figure>
         </div>
       </section>
 

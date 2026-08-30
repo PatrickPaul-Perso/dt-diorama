@@ -4,7 +4,10 @@ Website and project assets for the **Research Train Diorama Transfer** initiativ
 
 The site presents a detailed HO-scale Canadian railway diorama originally built as a physical demonstration platform for Digital Technologies research. Its intended audiences include museums, academic institutions, model railway organizations, and other potential recipients interested in continuing or repurposing the platform.
 
-Live site: https://research-train-diorama.patpaul.chatgpt.site
+Deployments:
+
+- GitHub Pages: https://patrickpaul-perso.github.io/dt-diorama/
+- ChatGPT Sites: https://research-train-diorama.patpaul.chatgpt.site
 
 ## Current content
 
@@ -45,6 +48,16 @@ For a production validation:
 ```bash
 npm test
 ```
+
+To build and validate the static GitHub Pages export:
+
+```bash
+npm run test:pages
+```
+
+The `Deploy GitHub Pages` workflow publishes the `out/` directory whenever a
+change is pushed to `main`. The Pages build uses `/dt-diorama` as its base path;
+the ChatGPT Sites build continues to use the domain root.
 
 ## Content status
 
