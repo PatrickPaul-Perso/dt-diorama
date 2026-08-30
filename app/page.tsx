@@ -115,6 +115,7 @@ const copy = {
     highlights: "Review the diorama highlights",
     comingSoon: "Detailed one-pager · Coming soon",
     footerStatement: "Originally created to demonstrate research capabilities in Digital Technologies.",
+    footerBrand: "Research Rail Diorama",
     backToTop: "Back to top ↑",
     aiTitle: "AI-assisted production",
     aiNotice: "Generative AI tools supported the production of this website. All published content was reviewed and validated by a human for accuracy, clarity and relevance.",
@@ -219,6 +220,7 @@ const copy = {
     highlights: "Voir les points saillants du diorama",
     comingSoon: "Document détaillé · À venir",
     footerStatement: "Créé à l'origine pour démontrer des capacités de recherche en technologies numériques.",
+    footerBrand: "Diorama ferroviaire de recherche",
     backToTop: "Retour en haut ↑",
     aiTitle: "Production assistée par l'IA",
     aiNotice: "Des outils d'intelligence artificielle générative ont contribué à la production de ce site Web. Tout le contenu publié a été révisé et validé par une personne afin d'en assurer l'exactitude, la clarté et la pertinence.",
@@ -361,7 +363,7 @@ export default function Home() {
       </section>
 
       <footer>
-        <div className="footer-brand"><a className="wordmark" href="#overview"><span className="signal-dot" />Research Rail Diorama</a><p>{content.footerStatement}</p></div>
+        <div className="footer-brand"><a className="wordmark" href="#overview" aria-label={content.homeLabel}><span className="signal-dot" />{content.footerBrand}</a><p>{content.footerStatement}</p></div>
         <aside className="ai-notice" aria-labelledby="ai-notice-title"><span className="ai-mark" aria-hidden="true">AI</span><div><strong id="ai-notice-title">{content.aiTitle}</strong><p>{content.aiNotice}</p></div></aside>
         <div className="footer-actions">
           <a href="#overview">{content.backToTop}</a>

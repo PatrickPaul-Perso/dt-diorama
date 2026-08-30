@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import test from "node:test";
 
 const developmentPreviewMeta =
@@ -37,4 +38,15 @@ test("renders the academic story without publishing a specific module identifier
   assert.match(html, /AI-assisted production/i);
   assert.match(html, /Generative AI tools supported the production of this website/i);
   assert.match(html, /Afficher le site en français/i);
+});
+
+test("localizes the footer brand link", async () => {
+  const source = await readFile(
+    new URL("../app/page.tsx", import.meta.url),
+    "utf8",
+  );
+
+  assert.match(source, /footerBrand: "Research Rail Diorama"/);
+  assert.match(source, /footerBrand: "Diorama ferroviaire de recherche"/);
+  assert.match(source, /\{content\.footerBrand\}<\/a>/);
 });
